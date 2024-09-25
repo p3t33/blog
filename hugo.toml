@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "hello-friend"  # Make sure your theme folder matches this name
+title = "Kobi Medrish's Blog"
+theme = "papermodx"  # Make sure your theme folder matches this name
 

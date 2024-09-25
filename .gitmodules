@@ -1,3 +1,6 @@
 [submodule "themes/hello-friend"]
 	path = themes/hello-friend
 	url = https://github.com/panr/hugo-theme-hello-friend.git
+[submodule "themes/papermodx"]
+	path = themes/papermodx
+	url = https://github.com/reorx/hugo-PaperModX.git
