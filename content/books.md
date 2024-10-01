@@ -8,6 +8,7 @@ These are books that I can wholeheartedly recommend.
 
 This list is regularly updated. Be sure to revisit often!
 
+
 ## Behavioral economics
 #### Thinking, Fast and Slow by Kahneman Daniel.
 This book defines the dual processes that influence our thoughts and decisions.

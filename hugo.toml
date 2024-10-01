@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://kobimedrish.com/'
 languageCode = 'en-us'
 title = "Kobi Medrish's Blog"
 theme = "papermodx"  # Make sure your theme folder matches this name
