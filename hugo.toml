@@ -3,3 +3,10 @@ languageCode = 'en-us'
 title = "Kobi Medrish's Blog"
 theme = "papermodx"  # Make sure your theme folder matches this name
 
+
+[menu]
+  [[menu.main]]
+    identifier = "contact"
+    name = "contact"
+    url = "/contact/"
+    weight = 10
