@@ -3,16 +3,19 @@ languageCode = 'en-us'
 title = "Kobi Medrish's Blog"
 theme = "papermodx"  # Make sure your theme folder matches this name
 
+[services]
+  [services.googleAnalytics]
+    ID = "G-0RK8S4HNWH"
 
 [menu]
   [[menu.main]]
     identifier = "books"
     name = "books recommendations"
     url = "/books/"
-    weight = 20
+    weight = 10
 
   [[menu.main]]
     identifier = "contact"
     name = "contact"
     url = "/contact/"
-    weight = 10
+    weight = 20
