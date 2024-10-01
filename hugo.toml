@@ -6,6 +6,12 @@ theme = "papermodx"  # Make sure your theme folder matches this name
 
 [menu]
   [[menu.main]]
+    identifier = "books"
+    name = "books recommendations"
+    url = "/books/"
+    weight = 20
+
+  [[menu.main]]
     identifier = "contact"
     name = "contact"
     url = "/contact/"
