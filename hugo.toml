@@ -7,6 +7,9 @@ theme = "papermodx"  # Make sure your theme folder matches this name
   [services.googleAnalytics]
     ID = "G-0RK8S4HNWH"
 
+[params]
+  defaultTheme = "dark"
+
 [menu]
   [[menu.main]]
     identifier = "books"
