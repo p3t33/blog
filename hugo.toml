@@ -3,12 +3,93 @@ languageCode = 'en-us'
 title = "Kobi Medrish's Blog"
 theme = "papermodx"  # Make sure your theme folder matches this name
 
+buildDrafts = false
+
+pygmentsUseClasses = true # code highlighting.
+enableRobotsTXT = true # generate robots.txt file for SEO
+
 [services]
   [services.googleAnalytics]
     ID = "G-0RK8S4HNWH"
 
 [params]
-  defaultTheme = "dark"
+  # Theme configurations
+  defaultTheme = "dark" # auto, light.
+  disableThemeToggle = false # user can decided what theme he likes to use.
+  disableSpecial1stPost = true # Makes all posts on the homepage look the same, without special styling for the first post.
+
+  hidemeta = false # hides post metadata(like publicaton date, author, etc).
+
+  # This setting controls whether to display a comment section on posts.
+  # Comments will only work if a third-party service like Disqus is configured.
+  # and this sectoin is enabled.
+  comments = false
+
+  # table of contents
+  showtoc = true  # will display toc.
+  tocopen = false # toc will not be expended by default.
+
+
+  ShowCodeCopyButtons = true
+
+  # used for SEO
+  description = "Kobi Medrish's blog on software development, Linux systems, DevOps, real-time systems, and modern programming practices. Covering topics like C/C++, Python, Bash, CI/CD, NixOS, microservices, ebike."
+  author = "Kobi Medrish"
+  keywords = [
+    "C",
+    "C++",
+    "Python",
+    "Bash",
+    "Cmake",
+    "Linux",
+    "Yocto",
+    "Real Time",
+    "ARM",
+    "x86",
+    "x64",
+    "Firmware",
+    "CI/CD",
+    "Ansible",
+    "nix",
+    "Gtest",
+    "Catch2",
+    "Valgrind",
+    "Sanitizers",
+    "gdb",
+    "kmemleak",
+    "Doxygen",
+    "KVM",
+    "VirtualBox",
+    "Docker",
+    "Encryption",
+    "SSH",
+    "GPG",
+    "OpenSSL",
+    "Blockchain",
+    "microservices",
+    "Clean Code",
+    "SOLID",
+    "Design Patterns",
+    "OOP",
+    "git",
+    "Networking",
+    "Multithreading",
+    "IPC",
+    "Data Structures",
+    "NixOS",
+    "i3wm",
+    "zsh",
+    "tmux",
+    "neovim",
+    "Emacs",
+    "Autodidact",
+    ]
+
+# Reduces the size of the output by removing unnecessary characters, making the website load faster,
+# but less human-readable.
+[minify]
+  disableXML = false   # Minifies XML, including RSS feeds
+  minifyOutput = true  # Minifies HTML and other output formats
 
 [menu]
   [[menu.main]]
