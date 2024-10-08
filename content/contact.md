@@ -1,7 +1,3 @@
----
-title: "Contact Me"
----
-
 Feel free to reach out to me.
 
 [Twitter](https://twitter.com/Kmedrish)
