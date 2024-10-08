@@ -1,4 +1,4 @@
-Feel free to reach out to me.
+I'm happy to receive comments and ideas from my readers. Feel free to reach out to me!
 
 [Twitter](https://twitter.com/Kmedrish)
 
