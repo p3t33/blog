@@ -1,7 +1,3 @@
----
-title: "Books recommendations"
----
-
 The list below includes books that have shaped my perspective and influenced the
 way I live my life, as well as some that I find thought-provoking and entertaining.
 These are books that I can wholeheartedly recommend.

@@ -93,6 +93,12 @@ enableRobotsTXT = true # generate robots.txt file for SEO
 
 [menu]
   [[menu.main]]
+  identifier = "about"
+  name = "about"
+  url = "/about/"
+  weight = 5
+
+  [[menu.main]]
     identifier = "books"
     name = "books recommendations"
     url = "/books/"
