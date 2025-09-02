@@ -1,105 +1,96 @@
 baseURL = 'https://kobimedrish.com/'
 languageCode = 'en-us'
 title = "Kobi Medrish's Blog"
-theme = "papermodx"  # Make sure your theme folder matches this name
+theme = "papermod"
 
 buildDrafts = false
 
-pygmentsUseClasses = true # code highlighting.
-enableRobotsTXT = true # generate robots.txt file for SEO
+pygmentsUseClasses = true
+enableRobotsTXT = true
 
+[outputs]
+
+  # HTML: for normal website.
+  # RSS: an XML feed, index.xml.
+  # JSON: for search.
+  home = ["HTML", "RSS", "JSON"]
 [services]
   [services.googleAnalytics]
     ID = "G-0RK8S4HNWH"
 
 [params]
-  # Theme configurations
-  defaultTheme = "dark" # auto, light.
-  disableThemeToggle = false # user can decided what theme he likes to use.
-  disableSpecial1stPost = true # Makes all posts on the homepage look the same, without special styling for the first post.
-
-  hidemeta = false # hides post metadata(like publicaton date, author, etc).
+  ShowShareButtons = true
+  ShareButtons = ["twitter", "linkedin", "facebook", "reddit", "whatsapp", "telegram"]
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  disableSpecial1stPost = true
+  hidemeta = false
   favicon = "favicon.png"
-
-  # This setting controls whether to display a comment section on posts.
-
-  # Comments will only work if a third-party service like Disqus is configured.
-  # and this sectoin is enabled.
   comments = false
-
-  # table of contents
-  showtoc = true  # will display toc.
-  tocopen = false # toc will not be expended by default.
-
-
+  showtoc = true
+  tocopen = false
   ShowCodeCopyButtons = true
-
-  # used for SEO
   description = "Kobi Medrish's blog on software development, Linux systems, DevOps, real-time systems, and modern programming practices. Covering topics like C/C++, Python, Bash, CI/CD, NixOS, microservices, ebike."
   author = "Kobi Medrish"
   keywords = [
-    "C",
-    "C++",
-    "Python",
-    "Bash",
-    "Cmake",
-    "Linux",
-    "Yocto",
-    "Real Time",
-    "ARM",
-    "x86",
-    "x64",
-    "Firmware",
-    "CI/CD",
-    "Ansible",
-    "nix",
-    "Gtest",
-    "Catch2",
-    "Valgrind",
-    "Sanitizers",
-    "gdb",
-    "kmemleak",
-    "Doxygen",
-    "KVM",
-    "VirtualBox",
-    "Docker",
-    "Encryption",
-    "SSH",
-    "GPG",
-    "OpenSSL",
-    "Blockchain",
-    "microservices",
-    "Clean Code",
-    "SOLID",
-    "Design Patterns",
-    "OOP",
-    "git",
-    "Networking",
-    "Multithreading",
-    "IPC",
-    "Data Structures",
-    "NixOS",
-    "i3wm",
-    "zsh",
-    "tmux",
-    "neovim",
-    "Emacs",
-    "Autodidact",
-    ]
+    "C", "C++", "Python", "Bash", "Cmake", "Linux", "Yocto", "Real Time", "ARM", "x86", "x64",
+    "Firmware", "CI/CD", "Ansible", "nix", "Gtest", "Catch2", "Valgrind", "Sanitizers", "gdb",
+    "kmemleak", "Doxygen", "KVM", "VirtualBox", "Docker", "Encryption", "SSH", "GPG", "OpenSSL",
+    "Blockchain", "microservices", "Clean Code", "SOLID", "Design Patterns", "OOP", "git",
+    "Networking", "Multithreading", "IPC", "Data Structures", "NixOS", "i3wm", "zsh", "tmux",
+    "neovim", "Emacs", "Autodidact"
+  ]
 
-# Reduces the size of the output by removing unnecessary characters, making the website load faster,
-# but less human-readable.
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  [params.socialAccounts]
+    twitter = { username = "kmedrish" }
+
+  [params.homeInfoParams]
+    # Title = "Welcome"
+    Content = """
+    Hi, I am an embedded software developer, tinkerer, and a generalist.
+
+    "A human being should be able to change a diaper, plan an invasion, butcher a hog,
+    conn a ship, design a building, write a sonnet, balance accounts, build a wall,
+    set a bone, comfort the dying, take orders, give orders, cooperate, act alone,
+    solve equations, analyze a new problem, pitch manure, program a computer,
+    cook a tasty meal, fight efficiently, die gallantly.
+    Specialization is for insects"
+
+    — Robert A. Heinlein.
+
+
+    """
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/p3t33"
+
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/Kmedrish"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/kmedrish"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
 [minify]
-  disableXML = false   # Minifies XML, including RSS feeds
-  minifyOutput = true  # Minifies HTML and other output formats
+  disableXML = false
+  minifyOutput = true
 
 [menu]
-  [[menu.main]]
-  identifier = "about"
-  name = "about"
-  url = "/about/"
-  weight = 5 # controls the order the section will be presented in the menu.
-
   [[menu.main]]
     identifier = "books"
     name = "books recommendations"
@@ -107,9 +98,9 @@ enableRobotsTXT = true # generate robots.txt file for SEO
     weight = 10
 
   [[menu.main]]
-    identifier = "contact"
-    name = "contact"
-    url = "/contact/"
+    identifier = "search"
+    name = "search"
+    url = "/search/"
     weight = 20
 
   [[menu.main]]
