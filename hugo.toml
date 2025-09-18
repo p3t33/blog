@@ -19,6 +19,7 @@ enableRobotsTXT = true
     ID = "G-0RK8S4HNWH"
 
 [params]
+  env = "production"
   ShowShareButtons = true
   ShareButtons = ["twitter", "linkedin", "facebook", "reddit", "whatsapp", "telegram"]
   defaultTheme = "dark"
