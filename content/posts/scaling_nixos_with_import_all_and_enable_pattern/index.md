@@ -3,6 +3,13 @@ title = "Scaling NixOS with \"Import All and Enable\" Pattern"
 date = 2025-09-13T10:30:05+03:00
 tags = ["Linux", "NixOS", "nix"]
 draft = false
+
+images = ["https://kobimedrish.com/posts/scaling_nixos_with_import_all_and_enable_pattern/cover.png"]
+
+[cover]
+image = "cover.png"   # because this is a page bundle, keep it next to index.md
+relative = true
+
 +++
 
 The default structure of a fresh NixOS installation makes a lot of sense, two files,
