@@ -3,6 +3,7 @@ title = 'Advanced workflows with tmux'
 date = 2024-10-03T11:00:32+03:00
 draft = false
 tags = ["tmux", "zoxide", "fzf"]
+images = ["https://kobimedrish.com/posts/advanced_workflows_with_tmux/cover.png"]
 
 [cover]
 image = "cover.png"   # because this is a page bundle, keep it next to index.md
