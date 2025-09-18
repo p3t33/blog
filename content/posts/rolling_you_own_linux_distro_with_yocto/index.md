@@ -3,6 +3,12 @@ title = 'Rolling you own Linux distro with yocto'
 date = 2024-10-27T11:00:32+03:00
 draft = false
 tags = ["Linux", "yocto", "bitbake", "poky"]
+images = ["https://kobimedrish.com/posts/rolling_you_own_linux_distro_with_yocto/1.png"]
+
+[cover]
+image = "1.png"   # because this is a page bundle, keep it next to index.md
+relative = true
+
 +++
 
 ![](1.png)
