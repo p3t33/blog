@@ -1,10 +1,18 @@
 +++
-title = 'Hands-On Introduction to BitBake'
+title = 'Intro to Yocto, part 2 - Hands-On Introduction to BitBake'
 date = 2025-07-09T18:47:34+03:00
 draft = false
 tags = ["Linux", "Yocto", "bitbake", "poky"]
 +++
 
+---
+**All posts in this series:**
+1. [Intro to Yocto, part 1 - Rolling your own Linux distro with yocto](/posts/rolling_you_own_linux_distro_with_yocto)
+2. (current) [Intro to Yocto, part 2 - Hands-On Introduction to BitBake](/posts/hands_on_introduction_to_bitbake)
+3. [Intro to Yocto, part 3 - Building a Poky (Yocto Project) Image for QEMU](/posts/building_a_poky_yocto_project_image_for_qemu)
+4. [Intro to Yocto, part 4 - Yocto for raspberry pi4, build, boot, and cross compile](/posts/yocto_for_raspberry_pi4_clone_build_boot)
+
+---
 
 # Preface
 This post is based on a [tutorial](https://a4z.gitlab.io/docs/BitBake/guide.html) by Harald Achitz. As I was following
@@ -191,7 +199,7 @@ as the OpenEmbedded-Core layer (meta).
 
 ** The first run
 Execute form the build directory(~/bitbake-guide/build)
-```
+```bash
 bitbake
 ```
 
@@ -199,7 +207,7 @@ If all goes well you, should see the following message
 ![1](1.png)
 
 To get more information you can execute:
-```
+```bash
 bitbake -vDDD world
 ```
 With -VDDD is verbose as possible, and wold is just a name of a target to build.
@@ -320,7 +328,7 @@ bitbake first
 ```
 
 And output should be
-```
+```text
 Loading cache: 100% |##############################################################################| Time: 0:00:00
 Loaded 1 entries from dependency cache.
 NOTE: Resolving any missing task queue dependencies
@@ -407,7 +415,7 @@ some more functions(like do_build).
 
 ## Creating a class as part of the meta-tutorial layer
 I created ~/bitbake-guide/meta-tutorial/classes/mybuild.bbclass
-```
+```text
 # mybuild.bbclass
 
 mybuild_do_mycustomtask() {
@@ -516,7 +524,7 @@ second                :1.0-r1
 ```
 
 If we would like to see all tasks a recipe provides we can explore them with listtasks
-```
+```bash
 bitbake second -c listtasks
 ```
 ![2](2.png)
@@ -537,18 +545,18 @@ build/tmp/work/second-1.0-r1/temp directory.
 A single recipe might have multiple Tasks
 
 Build one recipe - To run all tasks for our second recipe we simply executed:
-```
+```bash
 bitbake second
 ```
 
 We could also run a specific task for a recipe - for example, if we only want to run the mypatch task
 for the second recipe. This can be done by applying the command.
-```
+```bash
 bitbake second -c mypatch
 ```
 
 Build everything - Simply running all tasks for all recipes can be done with:
-```
+```bash
 bitbake world
 ```
 
@@ -634,7 +642,7 @@ bitbake-layers add-layer ../meta-two/
 bitbake-layers show-layers
 ```
 We will see both of the layers :
-```
+```text
 NOTE: Starting bitbake server...
 layer                 path                                      priority
 ==========================================================================
@@ -828,7 +836,7 @@ LAYERDEPENDS is a statement in Yocto that explicitly declares the dependencies o
 another.
 
 Next we will create the append file **~/bitbake-guide/meta-two/recipes-base/first/first_0.1.bbappend**:
-```
+```text
 python do_patch () {
   bb.note ("first:do_patch")
 }
@@ -948,7 +956,7 @@ MYVAR="hello from MYVAR"
 
 ### Accessing the global var using a new recipe
 I create ~/bitbake-guide/meta-two/recipes-vars/myvar/myvar_0.1.bb and put into it:
-```
+```text
 DESCRIPTION = "Show access to global MYVAR"
 PR = "r1"
 
@@ -1047,7 +1055,7 @@ inherit varbuild
 ### Analyzing execution of varbuild recipe
 
 We start by executing the varbuild recipe
-```text
+```bash
 bitbake varbuild
 ```
 

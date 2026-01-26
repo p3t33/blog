@@ -1,9 +1,18 @@
 +++
-title = 'Yocto for raspberry pi4, build, boot, and cross compile'
+title = 'Intro to Yocto, part 4 - Yocto for raspberry pi4, build, boot, and cross compile'
 date = 2025-07-21T22:00:07+03:00
 draft = false
 tags = ["Linux", "Yocto", "bitbake", "poky", "raspberry"]
 +++
+
+---
+**All posts in this series:**
+1. [Intro to Yocto, part 1 - Rolling your own Linux distro with yocto](/posts/rolling_you_own_linux_distro_with_yocto)
+2. [Intro to Yocto, part 2 - Hands-On Introduction to BitBake](/posts/hands_on_introduction_to_bitbake)
+3. [Intro to Yocto, part 3 - Building a Poky (Yocto Project) Image for QEMU](/posts/building_a_poky_yocto_project_image_for_qemu)
+4. (current) [Intro to Yocto, part 4 - Yocto for raspberry pi4, build, boot, and cross compile](/posts/yocto_for_raspberry_pi4_clone_build_boot)
+
+---
 
 # Preface
 The goal of this post is to customize the Yocto reference distribution, Poky
@@ -40,7 +49,7 @@ cd ~/raspberry
 ```
 
 Disable app armor temporary:
-```
+```bash
 echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
 ```
 
@@ -160,7 +169,7 @@ repository to verify that raspberrypi4 is supported by listing the files inside 
 I will pick raspberrypi4-64.
 
 I will edit ~/raspberry/build/conf/local.conf and set my machine as
-``` text
+```text
 MACHINE = "raspberrypi4-64"
 ```
 
@@ -169,14 +178,14 @@ MACHINE = "raspberrypi4-64"
 ## Enabling UART(optional)
 Raspberrypi3(not sure about raspberrypi4) does not have the UART enabled by default, to enable it I just append to
 the end of the ~/raspberry/build/conf/local.conf file:
-```
+```text
 ENABLE_UART = "1"
 ```
 
 # Building the image
 It is finally time to build the image for raspberrypi4. Going back to the README.md file
 that is provided by meta-raspberrypi, we can look at the "Quick Start" section:
-```
+```text
 ## Quick Start
 
 1. source poky/oe-init-build-env rpi-build
@@ -297,9 +306,8 @@ echo $CXX
 ```
 
 With the expected value being, as an example :
-```
+```text
 aarch64-poky-linux-g++ -mcpu=cortex-a72+crc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/mnt/yocto/raspberry/poky/build/tmp/deploy/sdk/y/sysroots/cortexa72-poky-linux
-
 ```
 
 Now in order to compile for the Raspberry Pi4 you can use:

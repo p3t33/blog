@@ -1,9 +1,18 @@
 +++
-title = 'Building a Poky (Yocto Project) Image for QEMU'
+title = 'Intro to Yocto, part 3 - Building a Poky (Yocto Project) Image for QEMU'
 date = 2025-07-16T22:29:45+03:00
 draft = false
 tags = ["Linux", "Yocto", "bitbake", "poky", "qemu"]
 +++
+
+---
+**All posts in this series:**
+1. [Intro to Yocto, part 1 - Rolling your own Linux distro with yocto](/posts/rolling_you_own_linux_distro_with_yocto)
+2. [Intro to Yocto, part 2 - Hands-On Introduction to BitBake](/posts/hands_on_introduction_to_bitbake)
+3. (current) [Intro to Yocto, part 3 - Building a Poky (Yocto Project) Image for QEMU](/posts/building_a_poky_yocto_project_image_for_qemu)
+4. [Intro to Yocto, part 4 - Yocto for raspberry pi4, build, boot, and cross compile](/posts/yocto_for_raspberry_pi4_clone_build_boot)
+
+---
 
 After looking at why you should build your own distribution in [Rolling you own Linux distro with Yocto](/posts/rolling_you_own_linux_distro_with_yocto),
 And then looking on how [bitbake works](/posts/hands_on_introduction_to_bitbake), it is time to dip our toes in the water and create first
@@ -168,7 +177,7 @@ bitbake.
 
 To use the script you should make sure you sourced ordered oe-init-build-env(which
 will add it the shell PATH variable), and then from the build directory execute:
-```
+```bash
 runqemu qemuarm
 ```
 A virtual machine window should open and systemd init system will start running following the yocto loading.
@@ -178,7 +187,7 @@ If all goes well you should see a login screen, use root as the user name (no pa
 ![5](5.png)
 
 You can also run the VM in a non gui mode using:
-```
+```bash
 runqemu qemuarm nographic
 ```
 ![6](6.png)

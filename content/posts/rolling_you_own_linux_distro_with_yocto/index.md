@@ -1,11 +1,20 @@
 +++
-title = 'Rolling you own Linux distro with yocto'
+title = 'Intro to Yocto, part 1 - Rolling your own Linux distro with yocto'
 date = 2024-10-27T11:00:32+03:00
 draft = false
 tags = ["Linux", "yocto", "bitbake", "poky"]
 +++
 
 ![](1.png)
+
+---
+**All posts in this series:**
+1. (current) [Intro to Yocto, part 1 - Rolling your own Linux distro with yocto](/posts/rolling_you_own_linux_distro_with_yocto)
+2. [Intro to Yocto, part 2 - Hands-On Introduction to BitBake](/posts/hands_on_introduction_to_bitbake)
+3. [Intro to Yocto, part 3 - Building a Poky (Yocto Project) Image for QEMU](/posts/building_a_poky_yocto_project_image_for_qemu)
+4. [Intro to Yocto, part 4 - Yocto for raspberry pi4, build, boot, and cross compile](/posts/yocto_for_raspberry_pi4_clone_build_boot)
+
+---
 
 This post is the first in a series that will cover embedded development from the perspective of
 OS development, starting with the need of such solution, the moving parts, the basic configuration that
