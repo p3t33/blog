@@ -1,6 +1,6 @@
 baseURL = 'https://kobimedrish.com/'
 languageCode = 'en-us'
-title = "Kobi Medrish's Blog"
+title = "~/kobi-medrish"
 theme = "papermod"
 
 buildDrafts = false
