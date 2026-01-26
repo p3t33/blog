@@ -3,6 +3,11 @@ title = "Scaling NixOS with \"Import All and Enable\" Pattern"
 date = 2025-09-13T10:30:05+03:00
 tags = ["Linux", "NixOS", "nix"]
 draft = false
+
+[cover]
+image = "cover.jpg"
+alt = "NixOS configuration scaling pattern"
+relative = true
 +++
 
 The default structure of a fresh NixOS installation makes a lot of sense, two files,
