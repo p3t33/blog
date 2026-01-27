@@ -3,6 +3,11 @@ title = 'Advanced workflows with tmux'
 date = 2024-10-03T11:00:32+03:00
 draft = false
 tags = ["tmux", "zoxide", "fzf"]
+
+[cover]
+image = "cover.png"
+alt = "tmux session with panes"
+relative = true
 +++
 
 There are many videos and posts dealing with tmux and how to use it, most of them

@@ -3,6 +3,11 @@ title = 'Intro to Yocto, part 4 - Yocto for raspberry pi4, build, boot, and cros
 date = 2025-07-21T22:00:07+03:00
 draft = false
 tags = ["Linux", "Yocto", "bitbake", "poky", "raspberry"]
+
+[cover]
+image = "cover.png"
+alt = "yocto and pie board"
+relative = true
 +++
 
 ---

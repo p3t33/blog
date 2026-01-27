@@ -3,9 +3,13 @@ title = 'Intro to Yocto, part 1 - Rolling your own Linux distro with yocto'
 date = 2024-10-27T11:00:32+03:00
 draft = false
 tags = ["Linux", "yocto", "bitbake", "poky"]
-+++
 
-![](1.png)
+
+[cover]
+image = "cover.png"
+alt = "Yocto logo"
+relative = true
++++
 
 ---
 **All posts in this series:**

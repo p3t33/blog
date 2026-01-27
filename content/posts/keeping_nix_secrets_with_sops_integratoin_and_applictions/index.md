@@ -3,6 +3,11 @@ title = 'Keeping Nix Secrets with Sops: Integration and Applications'
 date = 2025-06-29T18:47:34+03:00
 draft = false
 tags = ["sops", "sops-nix", "age", "nixos", "nix", "home-manager"]
+
+[cover]
+image = "cover.jpg"
+alt = "NixOS logo with lock"
+relative = true
 +++
 When setting up a full NixOS system—or even just a standalone Home Manager module—secrets are often a core part of the
 configuration. With nix being declarative, it makes a lot of sense to integrate them into the nix configurations, but
