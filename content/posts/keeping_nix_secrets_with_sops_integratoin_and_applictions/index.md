@@ -452,7 +452,7 @@ users.users.<...> = {
 ### NetworkManger WiFi profiles using environment variables
 Environment file is just a file with multiple lines starting with variable name and assigning a value to it.
 
-```
+```text
 FOO=bar
 MEAT=BALL
 ```
@@ -479,11 +479,13 @@ be created /run/secrets/wifi/psk and /run/secrets/wifi/SSID
 
 Each file will have a single line
 
-```
+```text
 HOME_SSID=<...>
 ```
+
 And
-```
+
+```text
 HOME_PSK=<...>
 ```
 

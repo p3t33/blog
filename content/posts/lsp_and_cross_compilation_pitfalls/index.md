@@ -58,7 +58,7 @@ What is important to understand is that with or without including pthread the co
 
 I have created a source directory and files:
 
-```nil
+```text
 compilation_database
 ├── app
 │   └── main.cpp
@@ -103,7 +103,7 @@ int main()
 At this stage calngd will fail to find hello_world.h inside of main.cpp and you will get bunch of lsp erros.
 The code will be compiled, form the root of the compilation_database:
 
-```nil
+```bash
 clang++ app/main.cpp lib/hello_world.cpp -I./lib
 ```
 
