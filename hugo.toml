@@ -5,7 +5,6 @@ theme = "papermod"
 
 buildDrafts = false
 
-pygmentsUseClasses = true
 enableRobotsTXT = true
 
 [outputs]
@@ -25,7 +24,6 @@ enableRobotsTXT = true
   disableThemeToggle = false
   disableSpecial1stPost = true
   hidemeta = false
-  favicon = "favicon.png"
   comments = false
   showtoc = true
   tocopen = false
@@ -41,6 +39,9 @@ enableRobotsTXT = true
     "neovim", "Emacs", "Autodidact"
   ]
 
+  [params.assets]
+    favicon = "favicon.png"
+
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
@@ -50,8 +51,8 @@ enableRobotsTXT = true
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
 
-  [params.socialAccounts]
-    twitter = { username = "kmedrish" }
+  [params.social]
+    twitter = "kmedrish"
 
   [params.homeInfoParams]
     # Title = "Welcome"
@@ -105,6 +106,9 @@ Hi, I am an embedded software developer, tinkerer, and a generalist.
     weight = 30
 
 [markup]
+  [markup.highlight]
+    noClasses = false
+
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
